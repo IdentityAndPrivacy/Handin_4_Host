@@ -9,6 +9,8 @@ buildscript {
     }
 }
 
+mainClassName: Application'Application'
+
 apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
@@ -40,3 +42,5 @@ heroku {
   apiKey = 'f5651242-e3e6-456f-aaff-f0ed3d5c812d'
   appName = 'pi-host-server'
 }
+
+task stage(dependsOn: ['clean', 'installApp'])
