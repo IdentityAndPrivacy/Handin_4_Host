@@ -1,1 +1,1 @@
-web:    java -jar target/pi-host-server-0.1.0.jar --port $PORT
+web: java $JAVA_OPTS -Dserver.port=$PORT -jar target/*.jar
