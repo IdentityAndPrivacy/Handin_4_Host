@@ -38,4 +38,5 @@ task wrapper(type: Wrapper) {
 
 heroku {
   apiKey = 'f5651242-e3e6-456f-aaff-f0ed3d5c812d'
+  appName = 'pi-host-server'
 }

@@ -3,7 +3,7 @@
 # Idea
 .idea/
 
-.gradle/
+/.gradle/
 
 # Build
 build/
