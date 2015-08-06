@@ -1,9 +1,11 @@
 buildscript {
     repositories {
         mavenCentral()
+        maven { url 'http://dl.bintray.com/vermeulen-mp/gradle-plugins' }
     }
     dependencies {
         classpath("org.springframework.boot:spring-boot-gradle-plugin:1.2.5.RELEASE")
+        classpath("com.wiredforcode:gradle-heroku-plugin:1.0.0")
     }
 }
 
@@ -11,6 +13,7 @@ apply plugin: 'java'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 apply plugin: 'spring-boot'
+apply plugin: 'heroku'
 
 jar {
     baseName = 'pi-host-server'
@@ -31,4 +34,8 @@ dependencies {
 
 task wrapper(type: Wrapper) {
     gradleVersion = '2.3'
+}
+
+heroku {
+  apiKey = 'f5651242-e3e6-456f-aaff-f0ed3d5c812d'
 }
