@@ -101,56 +101,56 @@ public class Client {
     }
 
     // Getters
-    public BigInteger getM2_server() {
-        return M2_server;
+    public String getM2_server() {
+        return Utility.prettifyBigInteger(M2_server);
     }
 
-    public BigInteger getI() {
-        return I;
+    public String getI() {
+        return Utility.prettifyBigInteger(I);
     }
 
-    public BigInteger getP() {
-        return p;
+    public String getP() {
+        return p.toString();
     }
 
-    public BigInteger getB() {
-        return B;
+    public String getB() {
+        return Utility.prettifyBigInteger(B);
     }
 
-    public BigInteger getG() {
-        return g;
+    public String getG() {
+        return g.toString();
     }
 
-    public BigInteger getK() {
-        return k;
+    public String getK() {
+        return Utility.prettifyBigInteger(k);
     }
 
-    public BigInteger getM1() {
-        return M1;
+    public String getM1() {
+        return Utility.prettifyBigInteger(M1);
     }
 
-    public BigInteger getN() {
-        return N;
+    public String getN() {
+        return Utility.prettifyBigInteger(N);
     }
 
-    public BigInteger getS() {
-        return s;
+    public String getS() {
+        return s.toString();
     }
 
-    public BigInteger getX() {
-        return x;
+    public String getX() {
+        return Utility.prettifyBigInteger(x);
     }
 
-    public BigInteger getU() {
-        return u;
+    public String getU() {
+        return Utility.prettifyBigInteger(u);
     }
 
-    public BigInteger getM2() {
-        return M2;
+    public String getM2() {
+        return Utility.prettifyBigInteger(M2);
     }
 
     public String getA(){
-        return A.toString();
+        return Utility.prettifyBigInteger(A);
     }
 
 

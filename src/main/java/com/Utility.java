@@ -29,4 +29,8 @@ public class Utility {
         }
         return new BigInteger(sb.toString());
     }
+
+    public static String prettifyBigInteger(BigInteger input){
+        return input.toString().substring(0, 10) + "...";
+    }
 }

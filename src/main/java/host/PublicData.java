@@ -1,6 +1,7 @@
 package host;
 
 import com.User;
+import com.Utility;
 
 import java.math.BigInteger;
 
@@ -14,9 +15,9 @@ public class PublicData {
     public String abort;
 
     public PublicData(BigInteger N, BigInteger g, BigInteger k, String abort){
-        this.N = N.toString();
+        this.N = Utility.prettifyBigInteger(N);
         this.g = g.toString();
-        this.k = k.toString();
+        this.k = Utility.prettifyBigInteger(k);
         this.abort = abort;
     }
 }
