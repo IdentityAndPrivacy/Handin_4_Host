@@ -85,16 +85,17 @@ public class SessionController {
                 // Print success
                 System.out.println("Success! M2 is the same on client and server");
                 // return session
-                return fillSession(client, server);
+                return fillSession(client, server, k);
             }
 
         }
         // return session message: error
-        return fillSession(client, server);
+        return fillSession(client, server, k);
     }
 
-    private Session fillSession(Client client, Server server) {
-        Session session = new Session(client, server);
+    private Session fillSession(Client client, Server server, BigInteger k) {
+        PublicData publicData = new PublicData(N, g, k);
+        Session session = new Session(client, server, publicData);
 
         return session;
     }
