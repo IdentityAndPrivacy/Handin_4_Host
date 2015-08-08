@@ -121,8 +121,12 @@ public class Client {
         return g.toString();
     }
 
-    public String getK() {
+    public String getSmallK() {
         return Utility.prettifyBigInteger(k);
+    }
+
+    public String getBigK() {
+        return Utility.prettifyBigInteger(K);
     }
 
     public String getM1() {
@@ -133,8 +137,12 @@ public class Client {
         return Utility.prettifyBigInteger(N);
     }
 
-    public String getS() {
+    public String getSmallS() {
         return s.toString();
+    }
+
+    public String getBigS() {
+        return S.toString();
     }
 
     public String getX() {
@@ -149,10 +157,11 @@ public class Client {
         return Utility.prettifyBigInteger(M2);
     }
 
-    public String getA(){
+    public String getBigA(){
         return Utility.prettifyBigInteger(A);
     }
 
-
-    //u, x, S, k, M1, M2
+    public String getSmallA(){
+        return Utility.prettifyBigInteger(a);
+    }
 }

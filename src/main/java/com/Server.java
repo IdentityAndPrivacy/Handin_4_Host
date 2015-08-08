@@ -98,52 +98,63 @@ public class Server {
         }
         return true;
     }
-    public BigInteger getA() {
-        return A;
+    public String getA() {
+        return Utility.prettifyBigInteger(A);
     }
 
-    public BigInteger getB() {
-        return b;
+    public String getSmallB() {
+        return Utility.prettifyBigInteger(b);
+    }
+    public String getBigB() {
+        return Utility.prettifyBigInteger(B);
     }
 
-    public BigInteger getG() {
-        return g;
+    public String getG() {
+        return Utility.prettifyBigInteger(g);
     }
 
-    public BigInteger getI() {
-        return I;
+    public String getI() {
+        return Utility.prettifyBigInteger(I);
     }
 
-    public BigInteger getK() {
-        return k;
+    public String getSmallK() {
+        return Utility.prettifyBigInteger(k);
     }
 
-    public BigInteger getM1_client() {
-        return M1_client;
+    public String getBigK() {
+        return Utility.prettifyBigInteger(K);
     }
 
-    public BigInteger getM1() {
-        return M1;
+    public String getM1_client() {
+        return Utility.prettifyBigInteger(M1_client);
     }
 
-    public BigInteger getM2() {
-        return M2;
+    public String getM1() {
+        return Utility.prettifyBigInteger(M1);
     }
 
-    public BigInteger getN() {
-        return N;
+    public String getM2() {
+        return Utility.prettifyBigInteger(M2);
     }
 
-    public BigInteger getS() {
-        return S;
+    public String getN() {
+        return Utility.prettifyBigInteger(N);
     }
 
-    public BigInteger getX() {
-        return x;
+    public String getBigS() {
+        return Utility.prettifyBigInteger(S);
     }
 
-    public BigInteger getU() {
-        return u;
+    public String getSmallS() {
+        return Utility.prettifyBigInteger(currentUser.s);
+    }
+
+    public String getX() {
+        return Utility.prettifyBigInteger(x);
+    }
+
+    public String getU() {
+        return Utility.prettifyBigInteger(u);
     }
 
     public ArrayList<User> getUsers() {
