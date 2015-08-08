@@ -2,6 +2,7 @@
 
 # Idea
 .idea/
+pi-host-server.iml
 
 /.gradle/
 
