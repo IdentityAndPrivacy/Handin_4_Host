@@ -36,6 +36,7 @@ public class Server {
         // Find user in database from 'I'
         for (User user: users ){
             if (user.I.equals(I)){
+
                 currentUser = user;
                 return;
             }
@@ -96,5 +97,60 @@ public class Server {
             return false;
         }
         return true;
+    }
+    public BigInteger getA() {
+        return A;
+    }
+
+    public BigInteger getB() {
+        return b;
+    }
+
+    public BigInteger getG() {
+        return g;
+    }
+
+    public BigInteger getI() {
+        return I;
+    }
+
+    public BigInteger getK() {
+        return k;
+    }
+
+    public BigInteger getM1_client() {
+        return M1_client;
+    }
+
+    public BigInteger getM1() {
+        return M1;
+    }
+
+    public BigInteger getM2() {
+        return M2;
+    }
+
+    public BigInteger getN() {
+        return N;
+    }
+
+    public BigInteger getS() {
+        return S;
+    }
+
+    public BigInteger getX() {
+        return x;
+    }
+
+    public BigInteger getU() {
+        return u;
+    }
+
+    public ArrayList<User> getUsers() {
+        return users;
+    }
+
+    public User getCurrentUser() {
+        return currentUser;
     }
 }

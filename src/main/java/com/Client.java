@@ -8,7 +8,6 @@ import java.util.Random;
  * Created by mixmox on 07/08/15.
  */
 public class Client {
-    private String username;
     private BigInteger I;
     private BigInteger p;
     private BigInteger a;
@@ -102,7 +101,58 @@ public class Client {
     }
 
     // Getters
+    public BigInteger getM2_server() {
+        return M2_server;
+    }
+
+    public BigInteger getI() {
+        return I;
+    }
+
+    public BigInteger getP() {
+        return p;
+    }
+
+    public BigInteger getB() {
+        return B;
+    }
+
+    public BigInteger getG() {
+        return g;
+    }
+
+    public BigInteger getK() {
+        return k;
+    }
+
+    public BigInteger getM1() {
+        return M1;
+    }
+
+    public BigInteger getN() {
+        return N;
+    }
+
+    public BigInteger getS() {
+        return s;
+    }
+
+    public BigInteger getX() {
+        return x;
+    }
+
+    public BigInteger getU() {
+        return u;
+    }
+
+    public BigInteger getM2() {
+        return M2;
+    }
+
     public String getA(){
         return A.toString();
     }
+
+
+    //u, x, S, k, M1, M2
 }
