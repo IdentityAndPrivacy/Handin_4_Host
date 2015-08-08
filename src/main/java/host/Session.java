@@ -1,20 +1,26 @@
 package host;
 
+import com.Client;
+import com.Server;
+
 public class Session {
 
-    private final long id;
-    private final String content;
+    private final Client client;
 
-    public Session(long id, String content) {
-        this.id = id;
-        this.content = content;
+    public Server getServer() {
+        return server;
     }
 
-    public long getId() {
-        return id;
+    public Client getClient() {
+        return client;
     }
 
-    public String getContent() {
-        return content;
+    private final Server server;
+
+    public Session(Client client, Server server) {
+        this.client = client;
+        this.server = server;
     }
+
+
 }
