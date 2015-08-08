@@ -15,8 +15,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class SessionController {
 
-    private  final String template = "Hello, %s!";
-    private final AtomicLong counter = new AtomicLong();
     static Server server;
     static Client client;
     static BigInteger N = new BigInteger("167609434410335061345139523764350090260135525329813904557420930309800865859473551531551523800013916573891864789934747039010546328480848979516637673776605610374669426214776197828492691384519453218253702788022233205683635831626913357154941914129985489522629902540768368409482248290641036967659389658897350067939");
@@ -24,10 +22,13 @@ public class SessionController {
     static BigInteger g = new BigInteger("2");
 
     @RequestMapping("/session")
-    public Session session(@RequestParam(value="usernamePw", defaultValue="") String usernamePw) {
+    public Session session(@RequestParam(value="up", defaultValue="") String up) {
         // From web client
-        String username = "kasper";
-        String password = "111";
+        String[] parts = up.split(";");
+        String username = parts[0];
+        String password = parts[1];
+//        String username = "kasper";
+//        String password = "111";
 
         BigInteger I = Utility.stringToBigInteger(username);
 
