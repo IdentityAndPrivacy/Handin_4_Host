@@ -126,10 +126,10 @@ public class SessionController {
 
     private static ArrayList<User> createLookupFile() {
         ArrayList<User> users = new ArrayList<User>();
-        users.add(new User(Utility.stringToBigInteger("kasper"), new BigInteger("112"), g, N));
-        users.add(new User(Utility.stringToBigInteger("nikolas"), new BigInteger("111"), g, N));
-        users.add(new User(Utility.stringToBigInteger("martin"), new BigInteger("123"), g, N));
-        users.add(new User(Utility.stringToBigInteger("gert"), new BigInteger("123"), g, N));
+        users.add(new User(Utility.stringToBigInteger("kasper"), new BigInteger("112"), g, N, "kasper"));
+        users.add(new User(Utility.stringToBigInteger("nikolas"), new BigInteger("111"), g, N, "nikolas"));
+        users.add(new User(Utility.stringToBigInteger("martin"), new BigInteger("123"), g, N, "martin"));
+        users.add(new User(Utility.stringToBigInteger("gert"), new BigInteger("123"), g, N, "gert"));
         return users;
     }
 

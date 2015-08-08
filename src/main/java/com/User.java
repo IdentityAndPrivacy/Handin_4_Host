@@ -11,11 +11,13 @@ public class User {
     public BigInteger I;
     public BigInteger s;
     public BigInteger v;
+    public String username;
 
-    public User(BigInteger I, BigInteger p, BigInteger g, BigInteger N){
+    public User(BigInteger I, BigInteger p, BigInteger g, BigInteger N, String username){
         this.I = I;
         generateRandomSalt();
         calculate_v(N, g, p);
+        this.username = username;
     }
 
     private void calculate_v(BigInteger N, BigInteger g, BigInteger p) {
