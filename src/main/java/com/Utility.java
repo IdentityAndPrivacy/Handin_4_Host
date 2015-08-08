@@ -9,7 +9,7 @@ import java.security.MessageDigest;
 public class Utility {
     public static BigInteger hash(BigInteger bi) {
         try {
-            MessageDigest md = MessageDigest.getInstance("SHA-1");
+            MessageDigest md = MessageDigest.getInstance("SHA-256");
             md.reset();
             return new BigInteger(md.digest(bi.toString().getBytes()));
         }
