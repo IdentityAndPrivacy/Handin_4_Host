@@ -87,14 +87,14 @@ public class Client {
     }
 
     public boolean verify_B(){
-        if(B.equals("0")){
+        if(B.equals(0) || B.mod(N).equals(0) ){
             return false;
         }
         return true;
     }
 
     public boolean verify_u(){
-        if(u.equals("0")){
+        if(u.equals(0)){
             return false;
         }
         return true;
