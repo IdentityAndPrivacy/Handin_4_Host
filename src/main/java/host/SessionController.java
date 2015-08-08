@@ -20,6 +20,7 @@ public class SessionController {
     static BigInteger N = new BigInteger("167609434410335061345139523764350090260135525329813904557420930309800865859473551531551523800013916573891864789934747039010546328480848979516637673776605610374669426214776197828492691384519453218253702788022233205683635831626913357154941914129985489522629902540768368409482248290641036967659389658897350067939");
     //static BigInteger N = new BigInteger("1907");
     static BigInteger g = new BigInteger("2");
+    String abort = "false";
 
     @RequestMapping("/session")
     public Session session(@RequestParam(value="up", defaultValue="") String up) {
@@ -47,6 +48,11 @@ public class SessionController {
 
         // Client --> Server
         send_I_A(I, client.A);
+        //Server verify A
+        if(!server.verify_A()){
+            abort = "true";
+            return fillSession(client, server, k, abort);
+        }
 
         // Server computations
         server.lookup(server.I);
@@ -55,9 +61,20 @@ public class SessionController {
 
         // Server --> Client
         send_s_B(server.currentUser.s, server.B);
+        // Client verify B
+        if(!client.verify_B()){
+            abort = "true";
+            return fillSession(client, server, k, abort);
+        }
 
         // Client computation
         client.calculate_u();
+        // Client verify u
+        if(!client.verify_u()){
+            abort = "true";
+            return fillSession(client, server, k, abort);
+        }
+
         client.calculate_x();
         client.calculate_S();
         client.calculate_K();
@@ -85,16 +102,16 @@ public class SessionController {
                 // Print success
                 System.out.println("Success! M2 is the same on client and server");
                 // return session
-                return fillSession(client, server, k);
+                return fillSession(client, server, k, abort);
             }
 
         }
         // return session message: error
-        return fillSession(client, server, k);
+        return fillSession(client, server, k, abort);
     }
 
-    private Session fillSession(Client client, Server server, BigInteger k) {
-        PublicData publicData = new PublicData(N, g, k);
+    private Session fillSession(Client client, Server server, BigInteger k, String abort) {
+        PublicData publicData = new PublicData(N, g, k, abort);
         Session session = new Session(client, server, publicData);
 
         return session;

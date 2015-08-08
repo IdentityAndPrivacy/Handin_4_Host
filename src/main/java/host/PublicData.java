@@ -11,10 +11,12 @@ public class PublicData {
     public String N;
     public String g;
     public String k;
+    public String abort;
 
-    public PublicData(BigInteger N, BigInteger g, BigInteger k){
+    public PublicData(BigInteger N, BigInteger g, BigInteger k, String abort){
         this.N = N.toString();
         this.g = g.toString();
         this.k = k.toString();
+        this.abort = abort;
     }
 }
