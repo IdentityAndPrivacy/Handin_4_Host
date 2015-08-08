@@ -104,10 +104,15 @@ public class SessionController {
                 // return session
                 return fillSession(client, server, k, abort);
             }
+            else {
+                abort = "ABORT - M2 (proof of K) received from the Server is incorrect";
+                return fillSession(client, server, k, abort);
+            }
 
+        } else {
+            abort = "ABORT - M1 (proof of K) received from the Client is incorrect";
+            return fillSession(client, server, k, abort);
         }
-        // return session message: error
-        return fillSession(client, server, k, abort);
     }
 
     private Session fillSession(Client client, Server server, BigInteger k, String abort) {
