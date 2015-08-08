@@ -101,67 +101,67 @@ public class Client {
     }
 
     // Getters
-    public String getM2_server() {
-        return Utility.prettifyBigInteger(M2_server);
+    public BigInteger getM2_server() {
+        return M2_server;
     }
 
-    public String getI() {
-        return Utility.prettifyBigInteger(I);
+    public BigInteger getBigI() {
+        return I;
     }
 
-    public String getP() {
-        return p.toString();
+    public BigInteger getP() {
+        return p;
     }
 
-    public String getB() {
-        return Utility.prettifyBigInteger(B);
+    public BigInteger getB() {
+        return B;
     }
 
-    public String getG() {
-        return g.toString();
+    public BigInteger getG() {
+        return g;
     }
 
-    public String getSmallK() {
-        return Utility.prettifyBigInteger(k);
+    public BigInteger getSmallK() {
+        return k;
     }
 
-    public String getBigK() {
-        return Utility.prettifyBigInteger(K);
+    public BigInteger getBigK() {
+        return K;
     }
 
-    public String getM1() {
-        return Utility.prettifyBigInteger(M1);
+    public BigInteger getM1() {
+        return M1;
     }
 
-    public String getN() {
-        return Utility.prettifyBigInteger(N);
+    public BigInteger getN() {
+        return N;
     }
 
-    public String getSmallS() {
-        return s.toString();
+    public BigInteger getSmallS() {
+        return s;
     }
 
-    public String getBigS() {
-        return S.toString();
+    public BigInteger getBigS() {
+        return S;
     }
 
-    public String getX() {
-        return Utility.prettifyBigInteger(x);
+    public BigInteger getX() {
+        return x;
     }
 
-    public String getU() {
-        return Utility.prettifyBigInteger(u);
+    public BigInteger getU() {
+        return u;
     }
 
-    public String getM2() {
-        return Utility.prettifyBigInteger(M2);
+    public BigInteger getM2() {
+        return M2;
     }
 
-    public String getBigA(){
-        return Utility.prettifyBigInteger(A);
+    public BigInteger getBigA(){
+        return A;
     }
 
-    public String getSmallA(){
-        return Utility.prettifyBigInteger(a);
+    public BigInteger getSmallA(){
+        return a;
     }
 }

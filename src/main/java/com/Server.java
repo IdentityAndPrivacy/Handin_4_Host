@@ -21,7 +21,6 @@ public class Server {
     public BigInteger M2;
     private BigInteger N;
     private BigInteger S;
-    private BigInteger x;
     private BigInteger u;
     public ArrayList<User> users;
     public User currentUser;
@@ -98,63 +97,63 @@ public class Server {
         }
         return true;
     }
-    public String getA() {
-        return Utility.prettifyBigInteger(A);
+    public BigInteger getA() {
+        return A;
     }
 
-    public String getSmallB() {
-        return Utility.prettifyBigInteger(b);
+    public BigInteger getSmallB() {
+        return b;
     }
-    public String getBigB() {
-        return Utility.prettifyBigInteger(B);
-    }
-
-    public String getG() {
-        return Utility.prettifyBigInteger(g);
+    public BigInteger getBigB() {
+        return B;
     }
 
-    public String getI() {
-        return Utility.prettifyBigInteger(I);
+    public BigInteger getG() {
+        return g;
     }
 
-    public String getSmallK() {
-        return Utility.prettifyBigInteger(k);
+    public BigInteger getBigI() {
+        return I;
     }
 
-    public String getBigK() {
-        return Utility.prettifyBigInteger(K);
+    public BigInteger getSmallK() {
+        return k;
     }
 
-    public String getM1_client() {
-        return Utility.prettifyBigInteger(M1_client);
+    public BigInteger getBigK() {
+        return K;
     }
 
-    public String getM1() {
-        return Utility.prettifyBigInteger(M1);
+    public BigInteger getM1_client() {
+        return M1_client;
     }
 
-    public String getM2() {
-        return Utility.prettifyBigInteger(M2);
+    public BigInteger getM1() {
+        return M1;
     }
 
-    public String getN() {
-        return Utility.prettifyBigInteger(N);
+    public BigInteger getM2() {
+        return M2;
     }
 
-    public String getBigS() {
-        return Utility.prettifyBigInteger(S);
+    public BigInteger getN() {
+        return N;
     }
 
-    public String getSmallS() {
-        return Utility.prettifyBigInteger(currentUser.s);
+    public BigInteger getBigS() {
+        return S;
     }
 
-    public String getX() {
-        return Utility.prettifyBigInteger(x);
+    public BigInteger getSmallS() {
+        return currentUser.s;
     }
 
-    public String getU() {
-        return Utility.prettifyBigInteger(u);
+//    public String getX() {
+//        return Utility.prettifyBigInteger(x;
+//    }
+
+    public BigInteger getU() {
+        return u;
     }
 
     public ArrayList<User> getUsers() {
