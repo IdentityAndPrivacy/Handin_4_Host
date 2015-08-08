@@ -21,7 +21,6 @@ public class Server {
     public BigInteger M2;
     private BigInteger N;
     private BigInteger S;
-    private BigInteger x;
     private BigInteger u;
     public ArrayList<User> users;
     public User currentUser;
@@ -102,20 +101,27 @@ public class Server {
         return A;
     }
 
-    public BigInteger getB() {
+    public BigInteger getSmallB() {
         return b;
+    }
+    public BigInteger getBigB() {
+        return B;
     }
 
     public BigInteger getG() {
         return g;
     }
 
-    public BigInteger getI() {
+    public BigInteger getBigI() {
         return I;
     }
 
-    public BigInteger getK() {
+    public BigInteger getSmallK() {
         return k;
+    }
+
+    public BigInteger getBigK() {
+        return K;
     }
 
     public BigInteger getM1_client() {
@@ -134,13 +140,17 @@ public class Server {
         return N;
     }
 
-    public BigInteger getS() {
+    public BigInteger getBigS() {
         return S;
     }
 
-    public BigInteger getX() {
-        return x;
+    public BigInteger getSmallS() {
+        return currentUser.s;
     }
+
+//    public String getX() {
+//        return Utility.prettifyBigInteger(x;
+//    }
 
     public BigInteger getU() {
         return u;
