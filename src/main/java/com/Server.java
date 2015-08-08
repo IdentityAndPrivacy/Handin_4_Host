@@ -90,4 +90,11 @@ public class Server {
     public void calculate_M2() {
         M2 = Utility.hash(new BigInteger((A.toString() + M1.toString() + K.toString()).getBytes()));
     }
+
+    public boolean verify_A(){
+        if(B.equals("0")){
+            return false;
+        }
+        return true;
+    }
 }
