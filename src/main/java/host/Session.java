@@ -6,6 +6,8 @@ import com.Server;
 public class Session {
 
     private final Client client;
+    private final Server server;
+    private final PublicData publicData;
 
     public Server getServer() {
         return server;
@@ -15,11 +17,15 @@ public class Session {
         return client;
     }
 
-    private final Server server;
+    public PublicData getPublicData() {
+        return publicData;
+    }
 
-    public Session(Client client, Server server) {
+
+    public Session(Client client, Server server, PublicData publicData) {
         this.client = client;
         this.server = server;
+        this.publicData = publicData;
     }
 
 
