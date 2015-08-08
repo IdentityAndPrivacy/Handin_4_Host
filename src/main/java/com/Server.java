@@ -93,7 +93,7 @@ public class Server {
     }
 
     public boolean verify_A(){
-        if(B.equals("0")){
+        if(A.equals("0")){
             return false;
         }
         return true;
