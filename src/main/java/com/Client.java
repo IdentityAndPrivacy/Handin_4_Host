@@ -87,6 +87,20 @@ public class Client {
         return M2.equals(M2_server);
     }
 
+    public boolean verify_B(){
+        if(B.equals("0")){
+            return false;
+        }
+        return true;
+    }
+
+    public boolean verify_u(){
+        if(u.equals("0")){
+            return false;
+        }
+        return true;
+    }
+
     // Getters
     public String getA(){
         return A.toString();
