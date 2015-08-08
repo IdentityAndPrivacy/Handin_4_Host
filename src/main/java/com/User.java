@@ -26,7 +26,7 @@ public class User {
     }
 
     public void generateRandomSalt(){
-        s = new BigInteger(10, new Random());
+        s = new BigInteger(100, new Random());
     }
 
     public BigInteger getBigI(){
