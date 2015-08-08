@@ -28,6 +28,7 @@ public class SessionController {
         String[] parts = up.split(";");
         String username = parts[0];
         String password = parts[1];
+        abort = "";
 //        String username = "kasper";
 //        String password = "111";
 
