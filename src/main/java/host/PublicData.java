@@ -11,6 +11,7 @@ import java.math.BigInteger;
 public class PublicData {
     public BigInteger N;
     public BigInteger g;
+    public String bitGroup;
 
     public String getAbort() {
         return abort;
@@ -28,13 +29,18 @@ public class PublicData {
         return N;
     }
 
+    public String getBitGroup(){
+        return bitGroup;
+    }
+
     public BigInteger k;
     public String abort;
 
-    public PublicData(BigInteger N, BigInteger g, BigInteger k, String abort){
+    public PublicData(BigInteger N, BigInteger g, BigInteger k, String abort, String bitGroup){
         this.N = N;
         this.g = g;
         this.k = k;
         this.abort = abort;
+        this.bitGroup = bitGroup;
     }
 }
