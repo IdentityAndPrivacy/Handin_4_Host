@@ -19,7 +19,6 @@ public class SessionController {
     static Client client;
     static BigInteger N;
     static BigInteger g;
-    static String bitGroup = "";
 
     String abort = "";
 
@@ -74,7 +73,7 @@ public class SessionController {
         //Server verify A
         if(!server.verify_A()){
             abort = "ABORT - A == 0";
-            return fillSession(client, server, k, abort);
+            return fillSession(client, server, k, abort, bitGroup);
         }
 
         // Server computations
@@ -87,7 +86,7 @@ public class SessionController {
         // Client verify B
         if(!client.verify_B()){
             abort = "ABORT - B == 0";
-            return fillSession(client, server, k, abort);
+            return fillSession(client, server, k, abort, bitGroup);
         }
 
         // Client computation
@@ -95,7 +94,7 @@ public class SessionController {
         // Client verify u
         if(!client.verify_u()){
             abort = "ABORT - u == 0";
-            return fillSession(client, server, k, abort);
+            return fillSession(client, server, k, abort, bitGroup);
         }
 
         client.calculate_x();
@@ -125,20 +124,20 @@ public class SessionController {
                 // Print success
                 System.out.println("Success! M2 is the same on client and server");
                 // return session
-                return fillSession(client, server, k, abort);
+                return fillSession(client, server, k, abort, bitGroup);
             }
             else {
                 abort = "ABORT - M2 (proof of K) received from the Server is incorrect";
-                return fillSession(client, server, k, abort);
+                return fillSession(client, server, k, abort, bitGroup);
             }
 
         } else {
             abort = "ABORT - M1 (proof of K) received from the Client is incorrect";
-            return fillSession(client, server, k, abort);
+            return fillSession(client, server, k, abort, bitGroup);
         }
     }
 
-    private Session fillSession(Client client, Server server, BigInteger k, String abort) {
+    private Session fillSession(Client client, Server server, BigInteger k, String abort, String bitGroup) {
         PublicData publicData = new PublicData(N, g, k, abort, bitGroup);
         Session session = new Session(client, server, publicData);
 
