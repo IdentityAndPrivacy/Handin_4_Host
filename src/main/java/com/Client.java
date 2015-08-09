@@ -34,7 +34,7 @@ public class Client {
     }
 
     public void generateRandomNumber_a() {
-        a = new BigInteger(32, new Random());
+        a = new BigInteger(256, new Random());
     }
 
 

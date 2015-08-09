@@ -43,7 +43,7 @@ public class Server {
     }
 
     public void generateRandomNumber_b() {
-        b = new BigInteger(32, new Random());
+        b = new BigInteger(256, new Random());
     }
 
     public void calculateB() {
