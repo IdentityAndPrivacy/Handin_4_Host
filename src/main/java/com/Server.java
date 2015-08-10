@@ -47,7 +47,7 @@ public class Server {
     }
 
     public void calculateB() {
-        B = k.multiply(currentUser.v).add(g.modPow(b,N)); // k*v + g^b (mod N)
+        B = (k.multiply(currentUser.v).add(g.modPow(b,N))).mod(N); // k*v + (g^b mod N) mod N
     }
 
 
@@ -56,7 +56,7 @@ public class Server {
     }
 
     public void calculate_S() {
-        S = (A.multiply(currentUser.v.modPow(u,N))).modPow(b, N);
+        S = ((A.multiply(currentUser.v.modPow(u,N))).modPow(b, N)).mod(N);
         System.out.println("S in Server: " + S.toString());
     }
 

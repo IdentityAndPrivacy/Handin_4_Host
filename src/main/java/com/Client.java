@@ -39,7 +39,7 @@ public class Client {
 
 
     public void calculateA() {
-        A = g.modPow(a, N);
+        A = g.modPow(a, N); // g^a mod N
     }
 
     public void calculate_u() {
@@ -51,7 +51,7 @@ public class Client {
     }
 
     public void calculate_S() {
-        S = B.subtract(k.multiply(g.modPow(x, N))).modPow(a.add(u.multiply(x)), N); // S = (B - (k*g^x))^(a+ux)
+        S = (B.subtract(k.multiply(g.modPow(x, N))).modPow(a.add(u.multiply(x)), N)).mod(N); // S = (B - (k*g^x))^(a+ux) mod N
 
         System.out.println("S in Client: " + S.toString());
     }
